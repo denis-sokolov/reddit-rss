@@ -1,0 +1,34 @@
+{
+  "name": "reddit-rss",
+  "version": "1.0.0",
+  "description": "Simple RSS feed for a subreddit",
+  "main": "src/index.js",
+  "engines": {
+    "node": "^4.0.0"
+  },
+  "dependencies": {
+    "get-youtube-id": "^1.0.0",
+    "html-escape": "^2.0.0",
+    "node-fetch": "^1.6.3",
+    "node-rss": "^1.0.5",
+    "showdown": "^1.6.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node src/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/denis-sokolov/reddit-rss.git"
+  },
+  "keywords": [
+    "reddit",
+    "rss"
+  ],
+  "author": "Denis Sokolov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denis-sokolov/reddit-rss/issues"
+  },
+  "homepage": "https://github.com/denis-sokolov/reddit-rss#readme"
+}
