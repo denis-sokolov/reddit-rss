@@ -1,4 +1,4 @@
-const rss = require('node-rss');
+const RSS = require('rss');
 const description = require("./description");
 
 const title = function(i){
@@ -10,19 +10,19 @@ const title = function(i){
 };
 
 module.exports = function(name, url, items){
-  const feed = rss.createNewFeed(
-    name + ' Reddit summary',
-    'https://www.reddit.com/r/' + encodeURIComponent(name) + '/',
-    'A selection of best posts from Reddit ' + name,
-    '',
-    url);
+  const feed = new RSS({
+    title: name + ' Reddit summary',
+    site_url: 'https://www.reddit.com/r/' + encodeURIComponent(name) + '/',
+    description: 'A selection of best posts from Reddit ' + name,
+    feed_url: url,
+  });
 
-  items.forEach(i => feed.addNewItem(
-    title(i),
-    'https://www.reddit.com' + i.data.permalink,
-    (new Date(i.data.created * 1000)).toUTCString(),
-    description(i)
-  ));
+  items.forEach(i => feed.item({
+    title: title(i),
+    url: 'https://www.reddit.com' + i.data.permalink,
+    date: (new Date(i.data.created * 1000)).toUTCString(),
+    description: description(i)
+  }));
 
-  return rss.getFeedXML(feed);
+  return feed.xml();
 };
