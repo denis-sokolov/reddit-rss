@@ -13,7 +13,6 @@
     "rss": "^1.2.2",
     "showdown": "^1.6.4"
   },
-  "devDependencies": {},
   "scripts": {
     "start": "node src/start.js"
   },
