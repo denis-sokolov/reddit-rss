@@ -9,7 +9,6 @@
   "dependencies": {
     "get-youtube-id": "^1.0.0",
     "html-escape": "^2.0.0",
-    "node-fetch": "^1.6.3",
     "rss": "^1.2.2",
     "showdown": "^1.6.4"
   },
