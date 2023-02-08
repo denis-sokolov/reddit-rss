@@ -1,6 +1,6 @@
 {
   "name": "reddit-rss",
-  "version": "1.0.0",
+  "private": true,
   "description": "Simple RSS feed for a subreddit",
   "main": "src/index.js",
   "engines": {
